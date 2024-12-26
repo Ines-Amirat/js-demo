@@ -1,0 +1,614 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+     <input type="text" id ="myString">
+     <input type="button" id ="my" onclick="MyFunction()" value ="Click me">
+
+     <input type="text" id ="myString1">
+     <input type="button" id ="my1" value ="Click me">
+
+    <h3 id="result"></h3>
+    <p id="String"></p>
+
+    
+    <div  style =" background-color: rgb(141, 117, 163);text-align: center; ">
+        <label>Enter your height</label>
+        <input type="text" id ="height">
+        <br>
+        <label>Enter your weight</label>
+        <input type="text" id ="weight">
+        <br>
+        <button id ="Calculate">Calculate</button>
+        <br>
+        <p  style =" color:azure "id = "BMI"></p>
+        <br>
+        <p style =" color:azure " id ="comment"></p>
+
+    </div>
+
+
+    <div style=" text-align: center;">
+        <input type="text" id ="name">
+        <br>
+        <button id ="add">Add</button>
+        <button id ="delete">Delete</button>
+        <div style =" font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;"id = "array"></div>
+    </div>
+
+    <div style=" text-align: center;">
+        <input type="number" id ="number">
+        <br>
+        <button id ="cal">Calculate</button>
+        <div style =" font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;"id = "Multab"></div>
+        <!--no that's not correct--> <!--id = "Mul tab"></div> -->
+    </div>
+
+
+
+    <div style=" text-align: center;">
+        Vowel Letters  : (a, e,i,o,u) 
+        <br>
+        <input type="text" id ="stringdisplay">
+        <br>
+        <button id ="submit">Submit</button>
+        <div style =" font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;"id = "stringg"></div>
+    </div>
+
+
+
+
+
+    
+
+
+
+
+    <!--
+    <div  style =" background-color: rgb(141, 117, 163);text-align: center; ">
+        <div>
+            <label>Enter your height</label>
+            <input type="text" id ="height">
+        </div>
+        <div>
+            <label>Enter your weight</label>
+            <input type="text" id ="weight">
+        </div>
+        
+        <button id ="Calculate">Calculate</button>
+        <div>
+            <p  style =" color:azure "id = "BMI"></p>
+            <p style =" color:azure " id ="comment"></p>
+        </div>
+
+    </div>
+    -->
+
+    
+
+
+</body>
+<script>
+    /*
+    var x = 20
+    var text = "hello" 
+    var X = 30
+    var y 
+    y = x
+    console.log(x)
+    console.log(y)
+    x = 50
+    console.log(x) 
+    console.log("x")
+    console.log(text)
+    console.log(X)
+    console.log("10")
+    console.log(10) // att pas variable
+    console.log(5+5)
+    var opeartion = 5*5
+    console.log(opeartion)
+    var op2 = x*5
+    console.log(op2)
+    var op3 = x * y + 33 * op2
+    console.log(op3)
+    var op4 = x*5 + op4
+    console.log(op4)
+    var op5
+    console.log(op5) // ok no error but not logically
+    var op6 = 6
+    op6 = x+op6
+    console.log(op6)
+    var N = 10
+    N++
+    // ou N+=1
+    console.log(N)
+    console.log("Hello world")
+    var a = 5
+    a+= 5
+    var b = 6
+    a+=b*3
+    console.log(a)
+    var T1 = "hello"
+    var T2 = " world"
+    var T3 = "world"
+    console.log(T1 + 10) // concatination for string and number 
+    console.log(T1 + "10")  // concatination for string and string 
+    console.log(T1+T2)  // concatination for two strings 
+    console.log(T1+T3)
+    console.log(a-"12")
+    console.log(a *"12")
+    console.log(T1-"12")
+    console.log(T1-"hi")
+    console.log(T1+"12")
+    var x = "hello"
+    x++  // treat it as a operation arithmitic so undefined
+    console.log(x)
+    var y = "hello"
+    y = y+1 
+    console.log(y)
+    var z = "hi"
+    z+=10 
+    console.log(z)
+    */
+
+    var number1 = 10 
+    var number2 = 5
+    console.log("First number is "+number1)
+    var msg = `Second number is: ${number2}\n==================`
+    console.log(msg)
+    var sum = number1+number2
+    console.log("Sum is "+sum)
+    console.log("Sub is "+(number1-number2))
+    console.log("Mult is "+(number1*number2))
+    var div = number1/number2
+    var mod = number1%number2
+    var message = `Div is: ${div}\nMod is: ${mod}`
+    console.log(message)
+    document.getElementById("result").innerHTML = message
+    // console.log(5)
+
+    var name = "ines amirat"
+    console.log(typeof name)
+    console.log(typeof 5)
+    console.log(typeof 5.5)
+
+    var m = "hello world"
+    console.log(m.substring(1,7))
+
+    var m = "ines amirat"
+    var s = m.substring(1,7)
+    console.log(s)
+    console.log(m.length)
+
+
+    // document.getElementById("my1").addEventListener("click" , MyFunction)
+    document.getElementById("my1").addEventListener("click" ,function(){
+        var myElement1 = document.getElementById("myString1")
+        var myStr1 = myElement1.value
+        var S1 = myStr1.toUpperCase()
+        console.log(myStr1,"\n",S1)
+        var M1 = S1.replace("O","Y")
+        console.log(M1)
+        var R1 = M1.split("").reverse().join("")
+        console.log(R1)
+
+        document.getElementById("String").innerHTML = `${S1} ----- ${M1} --- ${R1}`
+    })
+
+    function MyFunction  (){
+        var myElement = document.getElementById("myString")
+        var myStr = myElement.value
+        var S = myStr.toUpperCase()
+        console.log(myStr,"\n",S)
+        var M = S.replace("O","Y")
+        console.log(M)
+        var R = M.split("").reverse().join("")
+        console.log(R)
+
+        document.getElementById("String").innerHTML = `${S} ----- ${M} --- ${R}`
+    }
+
+
+    var var1 = 2
+    var var2 =3
+    console.log(Math.min(var1, var2))
+
+    var v1 = "22"
+    var v2 = 22
+    var v3 = v1 +v2 
+
+    console.log(isNaN(v3))
+
+    var v1 = "22"
+    var v2 = "22"
+    var v3 = v1 +v2 
+
+    console.log(isNaN(v3))
+
+    var v1 = "hi"
+    var v2 = 22
+    var v3 = v1 *v2 
+
+    console.log(isNaN(v3))
+
+    var v1 = "22"
+    var v2 = 22
+    var v3 = v1 *v2 
+
+    console.log(isNaN(v3))
+
+    var v1 = "hi"
+    var v2 = "hello"
+    var v3 = v1 *v2 
+
+    console.log(isNaN(v3))
+
+    var v1 = "22"
+    var v2 = "22"
+    var v3 = v1 *v2 
+
+    console.log(isNaN(v3))
+
+
+    var x = true 
+    console.log(x)
+    console.log(typeof x)
+    console.log("true")
+    console.log(isNaN(x))
+    var y = isNaN(x)
+    console.log(y)
+    console.log(typeof y)
+
+    var z = 44
+    
+
+    console.log(x ==z)
+    console.log(x ==y)
+
+    var y = true
+    console.log(x ==y)
+
+    var x = "hi"
+    var y ="in"
+    var z = "hi "  // space
+    var e = "hi"
+    
+    console.log(x==y)
+    console.log(x ==z)
+    console.log(x ==e)
+
+    console.log(22 <= 23)
+    console.log(233 >= 244)
+
+    console.log(x == true )
+    console.log(Boolean(x) == true)
+
+
+    var c = 22
+    var y = 13
+    console.log(c = y )
+
+    var a = 0 
+    console.log(Boolean(a))
+
+
+    var a = 22
+    var b = 44
+
+    console.log(a == 3 || a == 22  || a > 5)
+    console.log(a == 3 && a == 22  && a > 5)
+    
+
+
+    // the two are same 
+    console.log(a <= 22)
+    console.log(a < 22 || a == 22)
+
+    // 
+    /*  */ 
+
+
+    var x = "23" 
+    var y  = 55
+    console.log(x+y)
+
+
+    
+    var x = 55 
+    var y  = "23"
+    console.log(x+y)
+
+
+    var x = "23" 
+    var y  = "55"
+    console.log(Number(x)+y)
+
+    var x = "23" 
+    var y  = "55"
+    console.log(Number(x)+Number(y))
+
+    var x = "23" 
+    var y  = "55"
+    console.log(x+Number(y))
+    console.log(typeof(y))
+
+    var x = "23" 
+    x = Number(x)
+    console.log(Number(x)+y)
+    console.log(typeof(x))
+
+    var x = 22 
+    console.log(String(x))
+
+    var x = 22 
+    console.log(x.toString())
+
+    var x = 22
+    console.log(Boolean(x))
+
+    var x = "22"
+    console.log(Boolean(x))
+
+    var  d
+    console.log(Boolean(d))
+
+    var x = 0
+    console.log(Boolean(x))
+
+    var x = "false"
+    console.log(Boolean(x))
+
+
+    //else if   vs elseif 
+    var age = 20 
+    if (age = 20){
+        console.log("Old and the age is: "+age)
+    }
+
+
+
+    var age = 20 
+    if (age >= 70)
+        console.log("Old and the age is: "+age)
+    else if(age >= 40){
+        console.log("Mid and the age is: "+age)
+    }
+    else {
+        console.log("young and the age is: "+age)
+  
+    }
+
+    
+    var age = 20 
+    var health ="good"
+
+    if (age >= 70)
+        console.log("Old and the age is: "+age)
+    else if(age >= 40 && health != week ){
+        console.log("Mid and the age is: "+age)
+    }
+    else {
+        console.log("young and the age is: "+age)
+  
+    }
+    
+
+    // if ( age >= 20 && age <= 40  && health == good){ }
+
+    switch (health) {
+       case  ("strong"):
+          console.log("your health is good")
+          break 
+       
+       case  ("week"):
+          console.log("you need to work on your health")
+          break 
+       
+       default :
+           console.log("you didn't enter you health satate try again ")
+           break 
+    }
+
+
+    switch (true){
+        case (age >= 70 ):
+            console.log("Old and the age is: "+age)
+            break
+
+        case (age >= 40 ):
+            console.log("Mid and the age is: "+age)
+            break  
+
+        default :
+            console.log("young and the age is: "+age)  
+              
+    }
+
+    // without break 
+    switch (true){
+        case (age >= 70 ):
+            console.log("Old and the age is: "+age) 
+
+        case (age >= 40 ):
+            console.log("Mid and the age is: "+age)  
+            
+        default :
+            console.log("young and the age is: "+age)  
+              
+    }
+
+
+
+
+    document.getElementById("Calculate").addEventListener("click",function (){
+            var height = document.getElementById("height").value
+            var weight = document.getElementById("weight").value
+
+            var BMI = weight / Math.pow(height,2)
+             
+            document.getElementById("BMI").innerHTML = BMI
+            console.log(BMI)
+
+
+
+            
+            /*
+            if (BMI < 18)
+                document.getElementById("comment").innerHTML = "Underweight"
+            // else if (BMI < 24.9) more logical 
+            else if (BMI > 18 && BMI < 24.9)
+                        document.getElementById("comment").innerHTML = "Ideal Weight"
+                 else  if (BMI > 25 && BMI < 29.9)
+                         document.getElementById("comment").innerHTML = "Overweight"
+                       else if (BMI > 30 && BMI < 34.9)
+                         document.getElementById("comment").innerHTML = "Obesity (Class 1)"
+                            else if (BMI > 35 && BMI < 39.9)
+                                document.getElementById("comment").innerHTML = "Obesity (Class 2)"
+                                  else 
+                                      document.getElementById("comment").innerHTML = "Severe Obesity"
+            */
+            var comment
+
+
+            if (BMI < 18)
+                comment = "Underweight"
+            // else if (BMI < 24.9) more logical 
+            else if (BMI > 18 && BMI < 24.9)
+                         comment = "Ideal Weight"
+            else if (BMI > 25 && BMI < 29.9)
+                         comment = "Overweight"
+            else if (BMI > 30 && BMI < 34.9)
+                         comment = "Obesity (Class 1)"
+            else if (BMI > 35 && BMI < 39.9)
+                         comment = "Obesity (Class 2)"
+                else 
+                         comment = "Severe Obesity"
+
+          
+            document.getElementById("comment").innerHTML = comment
+                            
+
+    })
+
+
+    var array = []
+    document.getElementById("add").addEventListener("click",function (){
+
+      
+        var value = document.getElementById("name").value
+        array.push(value)
+        console.log(array)
+        document.getElementById("array").innerHTML = array
+        document.getElementById("name").value = ""
+    })
+
+    document.getElementById("delete").addEventListener("click",function (){
+        
+        array.pop()
+        console.log(array)
+        document.getElementById("array").innerHTML = array
+        })
+
+    
+    for (var i=0; i<1000; i++){
+        console.log(i)
+    }
+
+    for (var i=0; i<1000; i++){
+        console.log("hello")
+    }
+
+    for (var i=0; i<500; i++){
+        if ( i % 2 == 0)
+           console.log(i)
+    }
+    
+     /* var c = "hellozzzz "
+        document.getElementById("result").innerHTML = c 
+     */
+ 
+
+    /* var number = document.getElementById("number").value
+    console.log(number)
+    var c 
+    for (var i=0; i<10; i++){
+         c = number * i 
+         console.log(c+" = "+number+" * "+i )
+    }
+    */ // c'est faux direcment il faut connaitre new value of input 
+
+    
+    
+    document.getElementById("cal").addEventListener("click",function (){
+        var text = ""
+        var number = document.getElementById("number").value
+        for (var i=0; i<10; i++){
+            var c = number * i 
+            console.log(c+" = "+number+" * "+i )
+            // document.getElementById("Mul tab").innerHTML =  text += ` ${number} * ${i} = ${c}  <br>`
+            // document.getElementById("Mul tab").innerHTML =  text += number + "*" + i + "=" + c + "<br>"; 
+            //document.getElementById("Mul tab").innerHTML =  text += ` <p>${number} * ${i} = ${c}</p>`
+            document.getElementById("Multab").innerHTML =  text += ` <h1>${number} * ${i} = ${c}</h1>`
+            
+
+        }
+    })
+
+    
+
+
+
+    document.getElementById("submit").addEventListener("click",function (){
+        
+
+        document.getElementById("stringg").innerHTML = ""
+        var S = ["a","e","i","o","u"]
+        var string = document.getElementById("stringdisplay").value
+        outerLoop: for (var i=0; i < string.length; i++){
+                        /*
+                        if (!S.includes(string[i])){
+                            console.log(string [i])
+                            var s = string [i] 
+                            document.getElementById("stringg").innerHTML += `<h1>${s}</h1>`
+                        }
+                        */
+                        for (j of S){
+                            if ( string[i] == j){
+                                continue outerLoop
+                            }  
+                            
+                            
+                        }
+                        var s = string [i] 
+                        s.toLowerCase() //taht's not correct
+                        s= s.toLowerCase()
+                        console.log(s)
+                        document.getElementById("stringg").innerHTML += `<span>${s}</span> <br>`
+            
+        }
+    })
+
+
+
+
+
+
+
+
+
+   
+    
+
+
+
+    
+
+    
+
+
+
+</script>
