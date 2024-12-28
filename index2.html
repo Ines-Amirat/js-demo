@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.2/anime.min.js"></script>
+    <style>
+
+    </style>
+</head>
+
+<body style="margin: 0; padding: 0;">
+    <div style="background-color: rgb(167, 119, 211); display:flex ; justify-content: center;align-items: center; height: 100vh; width: 100%;"
+        id="div">
+        <h1 onclick="alert(`Hello World`)">Hello World</h1>
+        <h2 onclick="this.innerHTML = `HI`">Hello World</h2>
+        <h3 onclick="MyFunction()">ines</h3>
+        <h3 id="Title"></h3>
+        <h3 id="Title1">souhaila</h3>
+        <h3 id="Title2">linda</h3>
+        <h3 id="Title3" onclick="LL(this)">linda</h3>
+        <div style="background-color: rgb(62, 24, 97); display:flex ; justify-content: center;align-items: center; "
+            id="div1">
+            <br>
+            <table id="table">
+                <tr style=" color: aliceblue; border-color:aliceblue;">
+                    <th>firstName</th>
+                    <th>lastName</th>
+                    <th>age</th>
+
+                </tr>`
+            </table>
+
+        </div>
+    </div>
+</body>
+
+
+<script>
+
+    let students = [
+        {
+            name: {
+                firstName: "Ahmad",
+                lastName: "Omar",
+            },
+            age: 15,
+            year: 2004,
+
+
+            course: [{ name: "Math", avg: 12, },
+            { name: "Hidtory", avg: 13, }],
+
+            printFullName: function () {
+                console.log(this.firstName + " " + this.lastName);
+            }
+        },
+        {
+            name: {
+                firstName: "Ahmad",
+                lastName: "Omar",
+            },
+            age: 15,
+            year: 2004,
+
+            course: [{ name: "Math", avg: 12, },
+            { name: "Hidtory", avg: 13, }],
+
+
+            printFullName: function () {
+                console.log(this.firstName + " " + this.lastName);
+            }
+        }
+
+    ];
+
+    for (var i = 0; i < students.length; i++) {
+        document.getElementById("table").innerHTML += `<tr>
+                                                            <th>${students[i].name.firstName}</th>
+                                                            <th>${students[i].name.lastName}</th>
+                                                            <th>${students[i].age}</th>
+                                                            
+                                                        </tr>`
+    }
+
+    /*
+        for({age ,year} of students){
+        document.getElementById("table").innerHTML += `<tr>
+                                                            <th>${students[i].age}</th>
+                                                            <th>${students[i].year}</th>
+                                                            
+                                                        </tr>`
+    }
+    */
+
+
+    let x = {
+        name: "Khaled"
+    };
+    let y = x;
+
+    x.name = "Yarob";
+
+    console.log("The x value is:", x);
+    console.log("The y value is:", y);
+
+
+    function MyFunction() {
+        document.getElementById("Title").innerHTML = "lamia"
+    }
+
+
+    document.getElementById("Title1").addEventListener("click", function () {
+        this.innerHTML = "ELINA"
+    })
+
+    document.getElementById("Title1").addEventListener("click", function () {
+        this.innerHTML = "ELINA"
+    })
+
+    document.getElementById("Title2").addEventListener("mouseover", function () {
+        this.innerHTML = "ELINA"
+    })
+
+    document.getElementById("Title2").addEventListener("mouseout", function () {
+        this.innerHTML = "ines"
+    })
+
+    function LL(ines) {
+        ines.innerHTML = "EEEEe"
+    }
+
+
+
+    anime({
+        targets: '#div1',
+        translateX: 100,
+        rotate: '1turn',
+        duration: 2000
+    });
+
+
+
+</script>
+
+</html>

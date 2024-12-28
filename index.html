@@ -58,6 +58,20 @@
         <button id ="submit">Submit</button>
         <div style =" font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;"id = "stringg"></div>
     </div>
+    <br>
+    <br>
+
+    <div style=" text-align: center;">
+        <input type="text" id ="nameStudent">
+        <br>
+        <button id ="check">Submit</button>
+        <div style =" font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;"id = "StudentList"></div>
+        <div style =" font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;"id = "Exist"></div>
+    </div>
+     <br><br>
+     <div style=" text-align: center;"id = "2DArray" ></div>
+     <br><br>
+     <div style=" text-align: center;"id = "MultTable" ></div>
 
 
 
@@ -565,7 +579,7 @@
     document.getElementById("submit").addEventListener("click",function (){
         
 
-        document.getElementById("stringg").innerHTML = ""
+        document.getElementById("stringg").value = ""
         var S = ["a","e","i","o","u"]
         var string = document.getElementById("stringdisplay").value
         outerLoop: for (var i=0; i < string.length; i++){
@@ -594,8 +608,172 @@
 
 
 
+    var student = ["ines","imene","lyna","soundes"]
+    
+    
+    // document.getElementById("StudentList").innerHTML = student +"---"
+    for (var i=0; i<= student.length -1; i++){
+        document.getElementById("StudentList").innerHTML += student[i] +"---"
+    }
 
 
+    document.getElementById("check").addEventListener("click",function (){
+
+        var find = false 
+        var name = document.getElementById("nameStudent").value
+        document.getElementById("nameStudent").value = ""
+        name= name.toLowerCase()
+        for (var i=0; i < student.length; i++){
+                 if ( student[i] === name  ){
+                     console.log(name+" is a student")
+                     document.getElementById("Exist").innerHTML = `${name} is a student`
+                     find = true
+                     break  
+                            }   
+        }
+        
+        if ( find == false  ){
+            document.getElementById("Exist").innerHTML = `${name} is Not a student`
+            console.log(name+" is a not  student")
+
+        }
+    })
+
+    
+
+/*
+    document.getElementById("check").addEventListener("click",function (){
+        var name = document.getElementById("nameStudent").value.toLowerCase()
+        document.getElementById("nameStudent").value = ""
+        var find = false 
+        for (var i=0; i < student.length; i++){
+                            if ( student[i] == name  ){
+                                find = true  
+                                break
+                            }
+                            
+        }
+
+        if (find == true){
+            
+            console.log(name+" is a student")
+            document.getElementById("Exist").innerHTML = `${name} is a student`
+            
+        }else{
+            
+            console.log(name+" is a not  student")
+            document.getElementById("Exist").innerHTML = `${name} is Not a student`
+
+        }
+    })
+        */
+
+
+
+   /*     
+   i =0
+   while(i<10){
+        console.log("ines")
+   }
+   */
+
+   i =0
+   while(i<10){
+        console.log("ines")
+        i = i+1
+   }
+
+
+   console.log("while loop")
+   i =11
+   while(i<10){
+        console.log(i)
+        i = i+1
+   }
+
+
+   console.log("do whileloop")
+   do{
+       console.log(i)
+       i = i+1
+   }while(i<10)
+
+   
+
+   var Array2D = [
+      ["ines","lyna","wissal"],
+      ["nouha","assala","hind","touka"],
+      ["fatma","sarra"]
+      
+    
+   ]
+   console.log(Array2D.length)
+   console.log(Array2D[1][1])
+    for (var i=0; i < Array2D.length; i++){
+         console.log(Array2D[i])
+         for (var j=0; j < Array2D[i].length; j++){
+            document.getElementById("2DArray").innerHTML += Array2D[i][j] +"---"
+            console.log(Array2D[i][j])
+         }
+         document.getElementById("2DArray").innerHTML += "<br>"
+
+        
+        
+        
+    }  
+    
+    
+        
+        var c 
+        for (var i=0; i < 10; i++){
+            for (var j=0; j < 10; j++){
+                c = i *j 
+                document.getElementById("MultTable").innerHTML += i + "*"+j+ "="+ c+"<br>"
+                
+            }
+            document.getElementById("MultTable").innerHTML += "<br>"
+            
+        }  
+       
+
+        var ArrayRev = [true,"hello",2,3,4,5]
+        console.log(ArrayRev)
+        function ReverseArray (ArrayRev){
+                var j = ArrayRev.length-1 
+                for (var i =0 ; i< ArrayRev.length /2; i++){
+                        var k = ArrayRev[i]
+                        ArrayRev[i] = ArrayRev[j]
+                        ArrayRev[j] = k
+                     
+                        j-- 
+                     
+                }
+
+                return ArrayRev
+                    
+        }
+
+         
+        console.log(ReverseArray(ArrayRev))
+
+        
+
+
+
+
+
+       
+
+
+
+
+
+
+
+
+
+   
+   
 
 
 

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div {
+            color: white;
+            width: 100%;
+            font-size: 40px;
+            height: 50vh;
+            background-color: rgb(0, 0, 0);
+        }
+    </style>
+
+
+</head>
+<body>
+    <div>
+        <ul id="ul">
+            <li id ="aaa">Ahmad</li>
+            <li id="ii">Khaled</li>
+            <li>Omar</li>
+            <li>Linda</li>
+        </ul>
+    </div>
+
+    <script>
+
+        document.getElementById("ul").innerHTML += "<li>ines</li>"
+       
+
+        // liElement textContent se sont des objects 
+        let liElement = document.createElement("li");
+        let textContent = document.createTextNode("Yarob");
+        liElement.appendChild(textContent);
+        document.getElementById("ul").appendChild(liElement);
+        document.getElementById("ul").removeChild(liElement);
+        let Ahmed = document.getElementById("aaa")
+        document.getElementById("ul").removeChild(Ahmed);
+
+        // document.getElementById("ii").innerHTML = ""
+
+
+
+    </script>
+</body>
+</html>

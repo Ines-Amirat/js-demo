@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body style="margin: 0; padding: 0;">
+    <div style="background-color: rgb(167, 119, 211); display:flex ; justify-content: center;align-items: center; height: 100vh; width: 100%;"
+        id="div">
+        <button
+            style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); height: 5%; width: 10%;"
+            id="change">Click here</button>
+    </div>
+
+
+    
+</body>
+
+
+
+
+
+
+<script>
+
+
+    document.getElementById("change").addEventListener("click", function () {
+        setInterval(function () {
+            var color = '#'; // hexadecimal starting symbol
+            var letters = ['000000', 'FF0000', '00FF00', '0000FF', 'FFFF00', '00FFFF', 'FF00FF', 'C0C0C0']; //Set your colors here
+            color += letters[Math.floor(Math.random() * letters.length)];
+            document.getElementById('div').style.background = color; // Setting the random color on your div element.
+        }, 1000)
+
+        setTimeout(function () {
+            var color = '#'; // hexadecimal starting symbol
+            var letters = ['000000', 'FF0000', '00FF00', '0000FF', 'FFFF00', '00FFFF', 'FF00FF', 'C0C0C0']; //Set your colors here
+            color += letters[Math.floor(Math.random() * letters.length)];
+            document.getElementById('change').style.background = color; // Setting the random color on your div element.
+        }, 1000)
+    })
+
+
+
+
+    let numbers = [1, 2, 3, 4];
+    console.log(numbers)
+    console.log(numbers[1, 2, 3, 3])
+
+
+    let num = [3, 4]
+    console.log(num[1], num[2])
+
+
+    var numa = []
+    var a = 3
+    numa[0] = 3
+    console.log(numa)
+
+
+
+    function cumulativeAddition(numbers) {
+        // Utiliser reduce pour calculer la somme totale des éléments
+        let total = numbers.reduce(function (prev, current) {
+            return prev + current;
+        })
+
+        // Créer un tableau contenant la somme totale et la longueur du tableau original
+        let arr = [total, numbers.length]
+
+        // Retourner le tableau
+        return arr
+    }
+
+    console.log(cumulativeAddition(numbers))
+
+
+
+
+
+
+    let student = {
+        firstName: "Khaled",
+        lastName: "Omar",
+        age: 15,
+        year: "2000",
+
+        printFullName: function () {
+            console.log(this.firstName + " " + this.lastName);
+        }
+    }
+
+    student.printFullName();
+
+
+
+    let students = [
+        {
+            firstName: "Ahmad",
+            lastName: "Omar",
+            age: 15,
+            year: "2002",
+            printFullName: function () {
+                console.log(this.firstName + " " + this.lastName);
+            }
+        },
+        {
+            firstName: "Sami",
+            lastName: "Omar",
+            age: 15,
+            year: "2000",
+            printFullName: function () {
+                console.log(this.firstName + " " + this.lastName);
+            }
+        }
+    ];
+
+    
+    console.log(typeof students[0]); 
+    console.log(students[0].firstName)
+
+    
+
+
+
+
+
+</script>
+
+</html>

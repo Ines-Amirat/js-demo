@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://code.jquery.com/jquery-3.7.1.slim.min.js"
+        integrity="sha256-kmHvs0B+OpCW5GVHUNjv9rOmY0IvSIRcf7zGUDTDQM8=" crossorigin="anonymous"></script>
+</head>
+
+<body>
+
+    <body>
+        <h1 id="text">Hello World</h1>
+        <h1 id="text1">Hello Ines</h1>
+
+        <script>
+
+            $("text1").html("Welcome to Tarmeez Channel");
+            // Change content on single click
+            document.getElementById("text").addEventListener("click", function () {
+                this.innerHTML = "Welcome to Tarmeez Channel";
+            });
+
+            // Change content on double click
+            document.getElementById("text").addEventListener("dblclick", function () {
+                this.innerHTML = "Tarmeez";
+            });
+
+            // Change content on single click
+            $("#text1").click(function () {
+                $(this).html("Welcome to Tarmeez Channel");
+            });
+
+            // Change content on double click
+            $("#text1").on("dblclick", function () {
+                $(this).html("Tarmeez");
+            })
+
+        </script>
+    </body>
+
+</body>
+
+</html>
